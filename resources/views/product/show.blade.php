@@ -39,11 +39,11 @@
             <div class="row">
                 <div class="col-xs-12 col-md-6">
                     @if($product->photos()->first())
-                        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        <div id="productCarousel" class="carousel slide" data-ride="carousel">
                             <ol class="carousel-indicators">
-                                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                                @for($i = 0; $i < count($product->photos); $i++)
+                                    <li data-target="#productCarousel" data-slide-to="{{$i}}" @if($i == 0) class="active" @endif></li>
+                                @endfor
                             </ol>
                             <div class="carousel-inner">
                                 @foreach($product->photos as $photo)
@@ -52,11 +52,11 @@
                                     </div>
                                 @endforeach
                             </div>
-                            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                            <a class="carousel-control-prev" href="#productCarousel" role="button" data-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                 <span class="sr-only">Previous</span>
                             </a>
-                            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                            <a class="carousel-control-next" href="#productCarousel" role="button" data-slide="next">
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                 <span class="sr-only">Next</span>
                             </a>

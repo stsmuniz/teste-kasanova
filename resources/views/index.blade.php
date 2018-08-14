@@ -17,8 +17,9 @@
             background: #fff url({{url('/css/images/header_cazapronta.jpg')}}) no-repeat center center ;
             color: #fff;
         }
-        .product img {
+        .product .product-image {
             height: 40vh;
+            background: #fff url('http://via.placeholder.com/350x150') no-repeat center/cover;
         }
     </style>
 </head>
@@ -44,9 +45,13 @@
                         <?php $product = $products[$i]; ?>
                         <div class="col-md-4">
                             <div class="card mb-4 shadow-sm product">
-                                <img src="{{$product->photos()->first() ? $product->photos()->first()->url : 'http://via.placeholder.com/350x150'}}"
-                                     alt="{{$product->title}}"
-                                     class="card-img-top">
+                                <a href="{{url('/produto/'.$product->id)}}">
+                                    <div class="product-image"
+                                         style="background-image: url({{
+                                         $product->photos()->first() ?
+                                         $product->photos()->first()->url :
+                                         'http://via.placeholder.com/350x150'}})"></div>
+                                </a>
                                 <div class="card-body">
                                     <h5 class="card-title">{{$product->title}}</h5>
                                     <p class="card-text">Categoria: {{$product->category->name}}</p>

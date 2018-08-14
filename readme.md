@@ -15,3 +15,16 @@
 - categoria
 - descrição
 - valor
+
+## Desenvolvimento
+Foi desenvolvido utilizando Laravel 5.6, MySQL 5.7, docker e bootstrap 4.
+
+### prints
+Segue prints do sistema em funcionamento
+
+#### Vitrine
+![Vitrine](public/img/vitrine_produto.png?raw=true)
+#### Detalhe do produto
+![Detalhe do produto](public/img/detalhes_produto.png?raw=true)
+#### Cadastrar produto
+![Cadastrar produto](public/img/cadastrar_produto.png?raw=true)
