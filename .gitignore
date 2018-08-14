@@ -1,9 +1,5 @@
 /node_modules
 /public/hot
-/public/img/*
-!/public/img/public/img/vitrine_produto.png
-!/public/img/public/img/detalhes_produto.png
-!/public/img/public/img/cadastrar_produto.png
 /public/storage
 /storage/*.key
 /vendor
